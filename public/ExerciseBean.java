@@ -9,8 +9,6 @@ public class ExerciseBean {
         do {
             createExercise();
         }while (answer < 0);
-
-
     }
 
     /**

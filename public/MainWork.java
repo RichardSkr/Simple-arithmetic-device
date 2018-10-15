@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,13 +8,9 @@ public class MainWork {
         int exerciseCount=in.nextInt();
         String answer;//用户输入的答案
         System.out.println("共有"+ exerciseCount + "题");
-        List<ExerciseBean> exerciseList = new ArrayList<ExerciseBean>();
-        for (int i = 0;i < exerciseCount;i++) {
-            exerciseList.add(new ExerciseBean());
-        }
+        List<ExerciseBean> exerciseList = ExerciseUtils.getExerciseList(exerciseCount);
         int score = 0;      //用户答题得分
         for (int i = 0;i<exerciseList.size();i++){
-
             String exercise = i+1 + "、";
             for (int j = 0;j < 3;j++){
                 exercise += exerciseList.get(i).num[j] + exerciseList.get(i).operator[j];
